@@ -1,0 +1,15 @@
+{% extends 'recipe/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if recipe.published_date %}
+            <div class="date">
+                {{ recipe.published_date }}
+            </div>
+        {% endif %}
+        <a class="btn btn-default" href="{% url 'recipe_edit' pk=recipe.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <h2>{{ recipe.title }}</h2>
+        <p>{{ recipe.ingredients|linebreaksbr }}</p>
+        <p>{{ recipe.directions|linebreaksbr }}</p>
+    </div>
+{% endblock %}
