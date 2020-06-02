@@ -7,6 +7,10 @@ body {
     background-color: rgb(253, 244, 222);
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Layout (CSS Grid) */
 .grid-container {
     display: grid;
@@ -30,8 +34,12 @@ header h1 {
 }
 .add_btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0;
+    right: 30px;
+}
+.add_btn>span {
+    font-size: 30px;
+    color: #6A6876;
 }
 
 aside {
@@ -50,40 +58,60 @@ aside {
     padding-top: 10px;
     padding-left: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
 }
 .recipe-title {
-    font-size: 1vw;
+    font-size: 25px;
     font-weight: bold;
     padding-top: 40px;
 }
 .recipe-cooktime {
-    font-size: 0.7vw;
+    margin-top: 7px;
+    font-size: 17px;
+}
+.title-item:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+.title-item:active {
+    opacity: 0.85;
+    cursor: pointer;
 }
 
-section {
+#recipe-ingredients {
     grid-area: ingredients;
     background-color: rgb(233, 148, 125);
     border-radius: 10px;
-    padding-top: 0px;
-    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 50px;
     color: rgb(253, 244, 222);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-section h1 {
+#recipe-ingredients h1 {
     margin: 0;
+}
+#recipe-ingredients-text {
+    font-size: 30px;
 }
 
-main {
+#recipe-directions {
     grid-area: directions;
     background: #FFB4A0;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
     margin-left: 15px;
     margin-right: 40px;
-    border-radius: 10px;
+    font-size: 50px;
     color: rgb(253, 244, 222);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-main h1 {
+#recipe-directions h1 {
     margin: 0;
+}
+#recipe-directions-text {
+    font-size: 30px;
 }
 
 /* Selected */
@@ -91,9 +119,11 @@ main h1 {
     color: #FFCBB1;
 }
 
+
 /* Recipe pulldown */
 article ul {
     list-style: none;
+    z-index: 5;
 }
 span.three-vertical-dots {
     /* Put the three dots on top right corner of recipe card */
@@ -104,31 +134,45 @@ span.three-vertical-dots {
 .three-vertical-dots:hover {
     cursor: pointer;
     font-size: 20px;
-}
+}   
 .three-vertical-dots li:active {
-    color: #fff;
+    color: rgb(255, 239, 218);
 }
 ul .recipe-pulldown {
     display: none;
-    position: relative;
-    background-color: white;
+    background-color: rgb(253, 244, 222);
     border: 1px solid #333;
     border-radius: 4px;
-    bottom: 57px;
-    left: 350px;
-    width: 100px;
+    width: 90px;
     padding: 5px;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    text-align: end;
 }
 ul .recipe-pulldown li {
     color: #333;
     display: block;
     block-size: auto;
-    /* padding: 5px; */
-    font-weight: 200;
 }
 article>ul>li:hover .recipe-pulldown {
     display: block;
 }
-.recipe-pulldown:hover {
+ul .recipe-pulldown a {
+    color: rgb(76, 74, 83);
+    font-size: 15px;
+}
+ul .recipe-pulldown a:hover {
+    font-size: 16px;
+}
 
+
+/* Media Queries */
+@media (max-width: 1300px) {
+    .recipe-title {
+        font-size: 20px;
+    }
+    .recipe-cooktime {
+        font-size: 15px;
+    }
 }

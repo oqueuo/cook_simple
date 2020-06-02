@@ -3,12 +3,12 @@
 {% block content %}
             {% for recipe in recipes %}
 
-                <div class="title-item"> <!-- Shows the recipe title and time -->
+                <div class="title-item" onclick="show_recipe(this)"> <!-- Shows the recipe title and time -->
 
-                    <article class="title_and_time">
+                    <article>
                         <span class="recipe-title">{{ recipe.title }}</span>
                         <p class="recipe-cooktime">{{ recipe.cooktime }}</p>
-                        
+
                         <ul>
                             <li><span class="glyphicon glyphicon-option-vertical three-vertical-dots"></span>
                                 <ul class="recipe-pulldown">
@@ -21,13 +21,13 @@
                     </article>
                 
                 <!-- Hidden elements (ingredients and directions) to be accessed by Javascript -->
-                    <div class="recipe-ingredients hidden">
-                    
-                    </div>
+                    <textarea id="recipe-ingredients" class="hidden">
+                        {{ recipe.ingredients }}
+                    </textarea>
     
-                    <div class="recipe-directions hidden">
-    
-                    </div>
+                    <textarea id="recipe-directions" class="hidden">
+                        {{ recipe.directions }}
+                    </textarea>
                 </div>
 
                 

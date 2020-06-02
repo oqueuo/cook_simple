@@ -7,5 +7,5 @@ urlpatterns = [
     path('recipe/new/', views.recipe_new, name='recipe_new'),
     path('recipe/<pk>/remove/', views.recipe_remove, name='recipe_remove'),
     path('recipe/<int:pk>/edit', views.recipe_edit, name='recipe_edit'),
-    path('recipe/', views.eats, name='eats')
+    # path('recipe/', views.eats, name='eats')
 ]
