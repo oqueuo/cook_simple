@@ -1,3 +1,6 @@
 requirements.txt
 repo
 myvenv
+pipfile
+Pipfile
+Pipfile.lock

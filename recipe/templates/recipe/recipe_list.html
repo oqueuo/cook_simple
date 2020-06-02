@@ -1,13 +1,38 @@
 {% extends 'recipe/base.html' %}
 
 {% block content %}
-    {% for recipe in recipes %}
-        <div class="post">
-            <div class="date">
-                {{ recipe.published_date }}
-            </div>
-            <h2><a href="{% url 'recipe_detail' pk=recipe.pk %}">{{ recipe.title }}</a></h2>
-            <p>{{ recipe.directions|linebreaksbr }}</p>
-        </div>
-    {% endfor %}
+            {% for recipe in recipes %}
+
+                <div class="title-item"> <!-- Shows the recipe title and time -->
+
+                    <article class="title_and_time">
+                        <span class="recipe-title">{{ recipe.title }}</span>
+                        <p class="recipe-cooktime">{{ recipe.cooktime }}</p>
+                        
+                        <ul>
+                            <li><span class="glyphicon glyphicon-option-vertical three-vertical-dots"></span>
+                                <ul class="recipe-pulldown">
+                                    <li><a href="{% url 'recipe_detail' pk=recipe.pk %}">More Details</a></li>
+                                    <li><a href="{% url 'recipe_edit' pk=recipe.pk %}">Edit</a></li>
+                                    <li><a href="{% url 'recipe_remove' pk=recipe.pk %}">Remove</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                
+                <!-- Hidden elements (ingredients and directions) to be accessed by Javascript -->
+                    <div class="recipe-ingredients hidden">
+                    
+                    </div>
+    
+                    <div class="recipe-directions hidden">
+    
+                    </div>
+                </div>
+
+                
+                
+
+            {% endfor %}
 {% endblock %}
+

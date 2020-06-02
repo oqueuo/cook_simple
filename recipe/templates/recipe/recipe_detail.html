@@ -7,7 +7,8 @@
                 {{ recipe.published_date }}
             </div>
         {% endif %}
-        <a class="btn btn-default" href="{% url 'recipe_edit' pk=recipe.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a href="{% url 'recipe_edit' pk=recipe.pk %}"><button>EDIT</button></a>
+        <a href="{% url 'recipe_remove' pk=recipe.pk %}"><button>REMOVE</button></a>
         <h2>{{ recipe.title }}</h2>
         <p>{{ recipe.ingredients|linebreaksbr }}</p>
         <p>{{ recipe.directions|linebreaksbr }}</p>

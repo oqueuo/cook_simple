@@ -1,46 +1,134 @@
-.page-header {
-    background-color: #C25100;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
+/* Global */
+.hidden {
+    display: none;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 36pt;
+body {
+    background-color: rgb(253, 244, 222);
+}
+
+/* Layout (CSS Grid) */
+.grid-container {
+    display: grid;
+    grid-template-columns: 20vw 30vw 50vw;
+    grid-template-rows: 50px calc(100vh - 50px);
+    grid-template-areas: 
+        "topbar    topbar      topbar"
+        "title     ingredients directions";
+}
+
+header {
+    grid-area: topbar;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+header h1 {
+    margin: 0;
+    margin-left: 25px;
     text-decoration: none;
 }
-
-.content {
-    margin-left: 40px;
+.add_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+aside {
+    grid-area: title;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+.title-item {
+    position: relative;
+    height: 100px;
+    color: rgb(253, 244, 222);
+    border: 1px #6A6876 solid;
+    background-color: #6A6876;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.recipe-title {
+    font-size: 1vw;
+    font-weight: bold;
+    padding-top: 40px;
+}
+.recipe-cooktime {
+    font-size: 0.7vw;
 }
 
-.date {
-    color: #828282;
+section {
+    grid-area: ingredients;
+    background-color: rgb(233, 148, 125);
+    border-radius: 10px;
+    padding-top: 0px;
+    font-size: 30px;
+    color: rgb(253, 244, 222);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+section h1 {
+    margin: 0;
 }
 
-.save {
-    float: right;
+main {
+    grid-area: directions;
+    background: #FFB4A0;
+    margin-left: 15px;
+    margin-right: 40px;
+    border-radius: 10px;
+    color: rgb(253, 244, 222);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+main h1 {
+    margin: 0;
 }
 
-.post-form textarea, .post-form input {
-    width: 100%;
+/* Selected */
+.topheader {
+    color: #FFCBB1;
 }
 
-.top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
-    float: right;
-    font-size: 26pt;
-    margin-right: 20px;
+/* Recipe pulldown */
+article ul {
+    list-style: none;
 }
-
-.post {
-    margin-bottom: 70px;
+span.three-vertical-dots {
+    /* Put the three dots on top right corner of recipe card */
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
+.three-vertical-dots:hover {
+    cursor: pointer;
+    font-size: 20px;
+}
+.three-vertical-dots li:active {
+    color: #fff;
+}
+ul .recipe-pulldown {
+    display: none;
+    position: relative;
+    background-color: white;
+    border: 1px solid #333;
+    border-radius: 4px;
+    bottom: 57px;
+    left: 350px;
+    width: 100px;
+    padding: 5px;
+}
+ul .recipe-pulldown li {
+    color: #333;
+    display: block;
+    block-size: auto;
+    /* padding: 5px; */
+    font-weight: 200;
+}
+article>ul>li:hover .recipe-pulldown {
+    display: block;
+}
+.recipe-pulldown:hover {
 
-.post h2 a, .post h2 a:visited {
-    color: #000000;
 }
