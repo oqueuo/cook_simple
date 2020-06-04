@@ -4,3 +4,4 @@ myvenv
 pipfile
 Pipfile
 Pipfile.lock
+*.sqlite3

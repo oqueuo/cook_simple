@@ -15,7 +15,7 @@ a {
 .grid-container {
     display: grid;
     grid-template-columns: 20vw 30vw 50vw;
-    grid-template-rows: 50px calc(100vh - 50px);
+    grid-template-rows: 50px ;
     grid-template-areas: 
         "topbar    topbar      topbar"
         "title     ingredients directions";
@@ -34,12 +34,33 @@ header h1 {
 }
 .add_btn {
     position: absolute;
-    top: 0;
+    top: 3px;
     right: 30px;
+}
+.add_btn:hover {
+    opacity: 0.75;
+}
+.add_btn:active {
+    opacity: 0.6;
 }
 .add_btn>span {
     font-size: 30px;
     color: #6A6876;
+}
+.logout_btn {
+    position: absolute;
+    top: 13.5px;
+    left: 215px;
+}
+.logout_btn:hover {
+    opacity: 0.75;
+}
+.logout_btn:active {
+    opacity: 0.6;
+}
+.logout_btn>span {
+    font-size: 15px;
+    color: rgb(189, 185, 207);
 }
 
 aside {
@@ -87,6 +108,8 @@ aside {
     font-size: 50px;
     color: rgb(253, 244, 222);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 80vh;
+    overflow: hidden;
 }
 #recipe-ingredients h1 {
     margin: 0;
@@ -106,6 +129,8 @@ aside {
     font-size: 50px;
     color: rgb(253, 244, 222);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 80vh;
+    overflow: hidden;
 }
 #recipe-directions h1 {
     margin: 0;
@@ -168,11 +193,50 @@ ul .recipe-pulldown a:hover {
 
 
 /* Media Queries */
-@media (max-width: 1300px) {
+@media (max-width: 1700px) {
     .recipe-title {
         font-size: 20px;
     }
     .recipe-cooktime {
         font-size: 15px;
+    }
+
+    #recipe-ingredients {
+        font-size: 40px;
+    }
+    #recipe-ingredients-text {
+        font-size: 25px;
+    }
+    
+    #recipe-directions {
+        font-size: 40px;
+    }
+    #recipe-ingredients-text {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .recipe-title {
+        font-size: 20px;
+    }
+    .recipe-cooktime {
+        font-size: 15px;
+    }
+
+    #recipe-ingredients {
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    #recipe-ingredients-text {
+        font-size: 17px;
+    }
+    
+    #recipe-directions {
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    #recipe-directions-text {
+        font-size: 17px;
     }
 }
