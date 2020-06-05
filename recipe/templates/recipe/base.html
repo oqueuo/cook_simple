@@ -25,12 +25,12 @@
                 {% endif %}
                 <h1><a class="topheader" href="/">Cook Simple</a></h1>
             </header>
-
+            
             <aside class="title">
                 {% block content %}
                 {% endblock %}
             </aside>
-
+            {% if user.is_authenticated %}
             <section id="recipe-ingredients">
                 <h1>Ingredients</h1>
                 <p id="recipe-ingredients-text" style="opacity: 0.6; white-space: pre-line;">Cook</p>
@@ -40,6 +40,7 @@
                 <h1>Directions</h1>
                 <p id="recipe-directions-text" style="opacity: 0.6; white-space: pre-line;">Simple</p>
             </section>
+            {% endif %}
         </div>
     </body>
 </html>
