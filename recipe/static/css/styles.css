@@ -271,16 +271,18 @@ ul .recipe-pulldown a:hover {
         overflow-x: scroll;
         display: inline-flex;
 
-        margin-left: 10px !important;
         margin-right: 20px !important;
         /* height: 90px; 40px - more place for scrollbar, is hidden under parent box */
         /* white-space: nowrap; */
 
         -webkit-overflow-scrolling: touch;
     }
+
+    ::-webkit-scrollbar {display:none;}
+
     .title-item {
         /* min-width: 200px; */
-        min-width: 150px;
+        min-width: 170px;
         max-width: 300px;
         margin-right: 15px !important;
     }
@@ -292,7 +294,16 @@ ul .recipe-pulldown a:hover {
 
         min-height: 400px;
 
-        margin-left: 10px !important;
+        margin-left: 7px !important;
         margin-right: 10px !important;
+    }
+    .add_btn {
+        top: 6px;
+        right: 5px;
+    }
+    .logout_btn {
+        position: absolute;
+        top: 18.5px;
+        left: 200px;
     }
 }
