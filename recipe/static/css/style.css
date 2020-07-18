@@ -138,12 +138,28 @@ aside {
 #recipe-directions-text {
     font-size: 30px;
 }
+#recipe-ingredients, #recipe-directions, aside {
+    margin-top: 30px;
+}
 
 /* Selected */
 .topheader {
     color: #FFCBB1;
 }
-
+.search-bar {
+    margin-left: 22px;
+    margin-top: 15px;
+    min-width: 20vw;
+}
+.search-bar input {
+    width: 230px;
+    border-radius: 10px;
+    border: 1px solid rgb(110, 110, 110);
+    padding-left: 7px;
+}
+.search-bar input:focus {
+    outline: none;
+}
 
 /* Recipe pulldown */
 article ul {
@@ -260,6 +276,16 @@ ul .recipe-pulldown a:hover {
         margin-top: 5px !important;
         margin-left: 10px !important;
     }
+    .search-bar {
+        margin-left: 10px !important;
+        margin-top: 15px !important;
+        min-width: 20vw;
+    }
+    .search-bar input {
+        width: 230px;
+        border-radius: 10px;
+        border: 1px solid rgb(110, 110, 110);
+    }
     ::-webkit-scrollbar {
         width: 0px;  /* Remove scrollbar space */
         background: transparent;  /* Optional: just make scrollbar invisible */
@@ -270,11 +296,10 @@ ul .recipe-pulldown a:hover {
         grid-area: title;
         overflow-x: scroll;
         display: inline-flex;
-
         margin-right: 20px !important;
         /* height: 90px; 40px - more place for scrollbar, is hidden under parent box */
         /* white-space: nowrap; */
-
+        margin-top: 35px !important;
         -webkit-overflow-scrolling: touch;
     }
 
@@ -287,10 +312,8 @@ ul .recipe-pulldown a:hover {
         margin-right: 15px !important;
     }
     #recipe-ingredients, #recipe-directions {
-        width: 95vw;
+        width: 93vw;
         margin-top: 15px !important;
-        margin-left: 0;
-        margin-right: 0;
 
         min-height: 400px;
 

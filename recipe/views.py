@@ -9,7 +9,10 @@ from django.http import HttpResponse
 
 @login_required
 def recipe_list(request):
-    recipes = Recipe.objects.order_by('published_date')
+    # Show recipes only made by logged-in user.
+    recipes = Recipe.objects.filter(author=request.user)
+
+    recipes = recipes.order_by('published_date')
     return render(request, 'recipe/recipe_list.html', {'recipes': recipes})
 
 @login_required
@@ -41,7 +44,7 @@ def recipe_edit(request, pk):
             recipe.author = request.user
             recipe.published_date = timezone.now()
             recipe.save()
-            return redirect('recipe_detail', pk=recipe.pk)
+            return redirect('recipe_list')
     else:
         form = RecipeForm(instance=recipe)
     return render(request, 'recipe/recipe_edit.html', {'form': form})

@@ -12,7 +12,6 @@
                         <ul>
                             <li><span class="glyphicon glyphicon-option-vertical three-vertical-dots"></span>
                                 <ul class="recipe-pulldown">
-                                    <li><a href="{% url 'recipe_detail' pk=recipe.pk %}">More Details</a></li>
                                     <li><a href="{% url 'recipe_edit' pk=recipe.pk %}">Edit</a></li>
                                     <li><a href="{% url 'recipe_remove' pk=recipe.pk %}">Remove</a></li>
                                 </ul>
