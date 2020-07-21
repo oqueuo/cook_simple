@@ -147,19 +147,29 @@ aside {
     color: #FFCBB1;
 }
 .search-bar {
-    margin-left: 22px;
+    margin-left: 22px;  
     margin-top: 15px;
-    min-width: 20vw;
 }
 .search-bar input {
-    width: 230px;
+    width: calc(20vw - 35px);
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    color: #525865;
     border-radius: 10px;
-    border: 1px solid rgb(110, 110, 110);
+    border: 1px solid rgb(214, 214, 214);
     padding-left: 7px;
+    background: #fff;
+    box-shadow: inset 1px 10px 15px rgba(0, 0, 0, 0.07);
+    font-weight: bold;
+}
+.search-bar input:hover {
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.02);
 }
 .search-bar input:focus {
     outline: none;
+    box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Recipe pulldown */
 article ul {
@@ -282,9 +292,7 @@ ul .recipe-pulldown a:hover {
         min-width: 20vw;
     }
     .search-bar input {
-        width: 230px;
-        border-radius: 10px;
-        border: 1px solid rgb(110, 110, 110);
+        width: 170px;
     }
     ::-webkit-scrollbar {
         width: 0px;  /* Remove scrollbar space */
