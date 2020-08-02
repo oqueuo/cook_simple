@@ -1,9 +1,9 @@
-A very minimalist recipe storage and finder app. 
+Mobile |  Desktop
+:-------------------------:|:-------------------------:
+<a href="https://oqueuo.pythonanywhere.com><img src="images/cook_simple_mobile.png" width="250"></a>  |  <img src="images/cook_simple_desktop.png" width="600">
 
-No stories or history about the recipe. Just the title, time, ingredients, and directions. 
+Application hosted at: https://oqueuo.pythonanywhere.com
 
-Can't think of something to eat? Try adding one of the front page recipes from allrecipes.com! 
-The number of recipes able to add is intentionally very limited. This is to avoid stressing the allrecipes servers. 
-The main purpose of writing the scraper was for practice writing webscrapers and automatically filling out Django forms with information from a database.
+<h1>Cook Simple</h1>
 
-The Django code is loosely based off the Django tutorial by DjangoGirls
+If you're tired of finding a recipe online and having to scroll past 6 paragraphs of history before you get to the actual recipe, Cook Simple is perfect for you. Cook Simple is minimalist storage app that let's you create, edit, and share your recipes. To get started, simply make an account and click the "+" on the top right to make a recipe. When you're ready to cook, just pick one of the recipe cards and begin cooking!
