@@ -4,6 +4,8 @@ Mobile |  Desktop
 
 Application hosted at: https://oqueuo.pythonanywhere.com
 
+If you'd like to just demo, log in with: User - guest, Password - guestguest
+
 <h1>Cook Simple</h1>
 
 If you're tired of finding a recipe online and having to scroll past 6 paragraphs of history before you get to the actual recipe, Cook Simple is perfect for you. 
