@@ -19,6 +19,12 @@ Install dependencies:
 
 > pip install -r requirements.txt
 
+To run, the settings.py file needs a secret key. Generate one by entering the following into your terminal:
+
+> python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+
+Assign the secret key by opening 'cook-simple-master/appmain/settings.py' and pasting your key as SECRET_KEY on line 23
+
 Run the following command to start the application:
 
 > python manage.py runserver
