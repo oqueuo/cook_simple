@@ -28,21 +28,28 @@
                         </a>
                     </nav>
                 {% endif %}
+                
                 <h1><a class="topheader" href="/">Cook Simple</a></h1>
+                
                 <!-- Search bar -->
+                {% if user.is_authenticated %}
                 <div class="search-bar">
                     <input id="recipe-search-input" type="search" placeholder="Search.." onkeydown="search_recipe()" onclick="search_recipe()">
                 </div>
+                {% endif %}
+
             </header>
-
             
+            <div>
+                {% block registration %}
+                {% endblock registration %}
+            </div>
 
+            {% if user.is_authenticated %}
             <aside class="title" id="recipes-container">
                 {% block content %}
                 {% endblock %}
             </aside>
-            
-            {% if user.is_authenticated %}
             <section id="recipe-ingredients">
                 <h1>Ingredients</h1>
                 <p id="recipe-ingredients-text" style="opacity: 0.6; white-space: pre-line;">Cook</p>

@@ -1,6 +1,6 @@
 {% extends "recipe/base.html" %}
 
-{% block content %}
+{% block registration %}
     {% if form.errors %}
         <p>Your username and password didn't match. Please try again.</p>
     {% endif %}
@@ -19,6 +19,8 @@
         </table>
 
         <input type="submit" value="login" />
+        <a href="{% url 'register' %}"><button type="button">register</button></a>
         <input type="hidden" name="next" value="{{ next }}" />
+
     </form>
 {% endblock %}

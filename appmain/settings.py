@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'g03$d2rry3e-oyq$k9bzx7dq*ns5begb0eyf-qka8pp!74o5s8'
+SECRET_KEY = os.environ.get('COOKSIMPLE_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'corsheaders',
+    'crispy_forms',
     'recipe.apps.RecipeConfig',
+    'registration.apps.RegistrationConfig',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Login Redirect
 LOGIN_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK='bootstrap4'
