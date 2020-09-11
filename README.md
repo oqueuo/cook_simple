@@ -1,6 +1,6 @@
 Mobile |  Desktop
 :-------------------------:|:-------------------------:
-<img src="images/cook_simple_mobile.png" width="225">  |  <img src="images/cook_simple_desktop.png" width="600">
+<img src="images/cook_simple_mobile.png" width="230">  |  <img src="images/cook_simple_desktop.png" width="600">
 
 Application hosted at: https://oqueuo.pythonanywhere.com
 
